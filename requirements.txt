@@ -18,5 +18,6 @@ ensure
 fastapi
 uvicorn
 Jinja2
+typeguard
 
 -e .

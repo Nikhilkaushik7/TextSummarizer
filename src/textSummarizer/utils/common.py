@@ -6,14 +6,14 @@ import os
 from box.exceptions import BoxValueError
 import yaml
 from textSummarizer.logging import logger
-from ensure import ensure_annotations
 from box import ConfigBox
+from typeguard import typechecked
 from pathlib import Path
 from typing import Any
 
 
 
-@ensure_annotations  # this will catch our error such as variable data type mismatch just like cpp
+@typechecked  # this will catch our error such as variable data type mismatch just like cpp
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
     """reads yaml file and returns contents in yaml files
 
@@ -39,7 +39,7 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
     
 
 
-@ensure_annotations
+@typechecked
 def create_directories(path_to_directories: list, verbose=True):
     """create list of directories
 
@@ -54,7 +54,7 @@ def create_directories(path_to_directories: list, verbose=True):
 
 
 
-@ensure_annotations
+@typechecked
 def get_size(path: Path) -> str:
     """get size in KB
 
