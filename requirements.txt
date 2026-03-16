@@ -19,5 +19,5 @@ fastapi
 uvicorn
 Jinja2
 typeguard
-
+evaluate
 -e .
